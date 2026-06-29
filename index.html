@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Analytics Demo</title>
+
+    <style>
+
+        body{
+
+            font-family:Arial;
+
+            margin-top:50px;
+
+            text-align:center;
+
+        }
+
+        input{
+
+            padding:10px;
+
+            margin:10px;
+
+            width:120px;
+
+        }
+
+        button{
+
+            padding:10px 20px;
+
+            cursor:pointer;
+
+        }
+
+        h1{
+
+            color:#2196F3;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>Welcome to Google Analytics Demo</h1>
+
+<p>This website is used to learn Google Analytics.</p>
+
+<input id="num1" type="number" placeholder="Number 1">
+
+<br>
+
+<input id="num2" type="number" placeholder="Number 2">
+
+<br><br>
+
+<button onclick="addNumbers()">
+
+Add
+
+</button>
+
+<h2 id="result"></h2>
+
+<script>
+
+function addNumbers(){
+
+    let a=parseInt(document.getElementById("num1").value)||0;
+
+    let b=parseInt(document.getElementById("num2").value)||0;
+
+    let sum=a+b;
+
+    document.getElementById("result").innerHTML="Result : "+sum;
+
+    console.log("Addition Performed");
+
+}
+
+</script>
+
+</body>
+
+</html>
