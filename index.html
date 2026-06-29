@@ -80,16 +80,21 @@ Add
 
 function addNumbers(){
 
-    let a=parseInt(document.getElementById("num1").value)||0;
+    let a = parseInt(document.getElementById("num1").value) || 0;
+    let b = parseInt(document.getElementById("num2").value) || 0;
 
-    let b=parseInt(document.getElementById("num2").value)||0;
+    let sum = a + b;
 
-    let sum=a+b;
+    document.getElementById("result").innerHTML = "Result : " + sum;
 
-    document.getElementById("result").innerHTML="Result : "+sum;
+    // Send custom event to Google Analytics
+    gtag('event', 'addition_performed', {
+        number1: a,
+        number2: b,
+        result: sum
+    });
 
-    console.log("Addition Performed");
-
+    console.log("Custom Event Sent");
 }
 
 </script>
